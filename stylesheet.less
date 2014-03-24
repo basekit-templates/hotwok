@@ -23,6 +23,11 @@ Table of Contents -
 /* ===============================
    1. Default
    =============================== */
+
+.featureimage {
+  width: 100%;
+  height:100%;
+}
    
 .contain {
     position: relative;
@@ -33,7 +38,6 @@ body {
     margin: 0;
     padding: 0;
     background-color:@color-swatch1;
-    height:4000px;
 }
 
 .wrapper {
@@ -132,7 +136,13 @@ hr.line {
   background-color:transparent;
 }
 
-// Feature Widget
+.header-container {
+    padding:20px 0px;
+}
+
+/* ===============================
+   3. FEATURE
+   =============================== */
 /*
 .widget {
     &.feature {
@@ -142,13 +152,67 @@ hr.line {
     }
 }
 */
+
+.widget {
+    &.feature {
+        .feature-bgimg {
+            height: auto;
+        }
+        .feature-bgimg .content {
+            padding: 12em 2em;
+            @media @tablet {
+                padding: 8em 1em;
+            }
+            @media @mobile {
+                padding: 6em 1em;
+            }
+            h2 {
+                padding-bottom: 0.1em;
+                color: @font-swatch8-color;
+                font-family: @font-swatch8-font-family;
+                font-size: @font-swatch8-font-size; 
+                letter-spacing: @font-swatch8-letter-spacing;
+                line-height: @font-swatch8-line-height;
+                word-wrap: break-word;
+                @media @tablet {
+                    font-size: bkscale(@font-swatch8-font-size, 0.7);
+                    line-height: bkscale(@font-swatch8-line-height, 0.75);
+                }
+                span {
+                    border-bottom: 1px solid @color-swatch7;
+                    padding-bottom: 0;
+                    margin: 0px auto;
+                    display: table;
+                    text-align:center;
+                }
+            }
+            h3  { 
+                color: @color-swatch7;
+                display: block;
+                font-family: @font-swatch9-font-family;
+                font-size: @font-swatch9-font-size; 
+                letter-spacing: bkscale(@font-swatch10-letter-spacing, 0.8);
+                line-height: @font-swatch5-line-height;
+                margin-top: 20px;
+                text-align: center;
+                @media @tablet {
+                    font-size: bkscale(@font-swatch5-font-size, 1.2);
+                    letter-spacing: bkscale(@font-swatch10-letter-spacing, 0.6);
+                    line-height: bkscale(@font-swatch5-line-height, 1.1);
+                    margin-top: 25px;
+                }
+            }
+        }
+    }
+}
+ 
 .widget {
     &.feature {
         display: table;
-        position:relative;
-        width:100%;
+        position: relative;
+        width: 100%;
         overflow: hidden;
-        height: auto;
+        height: 100%;
         .feature-bgimg {
             display: table-row;
             width: 100%;
@@ -158,73 +222,55 @@ hr.line {
             -moz-background-size: cover;
             -o-background-size: cover;
             background-size: cover;
-            min-height: 100px; /* height should be in the media query */
+            min-height: 500px; /* height should be in the media query */
             .content {
-                min-height: 200px; /* height should be in the media query*/
                 display: table-cell;
                 vertical-align: middle;
                 -webkit-box-sizing: border-box;
                 -moz-box-sizing: border-box;
                 box-sizing: border-box;
-                @media @mobile {
-                    padding: 80px 0;
-                }
                 .spare {
                     display: block;
-                    width:40%;
-                    margin:0 15%;
+                    margin: 0 auto;
+                    max-width: 1400px;
                 }
             }
         }
     }
 }
 
-.contain{
-    margin-top:-2px;
-} 
-
-.widget.feature {
-	h2 {
-        font-family:@font-swatch8-font-family;
-        font-weight: @font-swatch8-font-weight;
-        color:@font-swatch8-color;
-        line-height:@font-swatch8-line-height;
-        letter-spacing: @font-swatch8-letter-spacing;
-        font-size: @font-swatch8-font-size;
-        background-color:@color-swatch3;
-        display:inline-block;
-        padding:30px;
-	}
-    h3 {
-        font-family:@font-swatch9-font-family;
-        font-weight: @font-swatch9-font-weight;
-        color:@font-swatch9-color;
-        line-height:@font-swatch9-line-height;
-        letter-spacing: @font-swatch9-letter-spacing;
-        font-size: @font-swatch9-font-size;
-        background-color:@color-swatch1;
-        display:inline-block;
-        padding:30px;
-    }
-    h2 span {
-    }
-    h3 span {
-    }
-	.spare {
-		width: 30%;
-	    display: inline-block;
-	    padding: 100px 10px;
-	    margin: 0px auto;
-/* 	    padding-left: (16px + @font-swatch10-letter-spacing); */
-	}
+.widget.feature .feature-bgimg .content button.btn {
+    background-image:image('/images/feature-btn.png');
+    height:60px;
+    background-repeat:no-repeat;
+    background-color:transparent;
+    background-position:center;
+    margin: 0px auto;
+    display: table;
+    width: 60px;
+    margin-top:50px;
+    display:none;
 }
 
-.feature-btn {
-    display:block;
+.featurebtn-container {
+    position: relative;
+    margin-top: -150px;
+    padding-bottom: 100px;
+    text-align:center;
 }
 
-.widget.feature .feature-bgimg .content button {
-    margin:0;
+.featurebtn {
+    background-image:image('/images/feature-btn.png');
+    height:60px;
+    background-repeat:no-repeat;
+    background-position:center;
+    width: 60px;
+    margin: 0px auto;
+    display:inline-block;
+}
+
+.widget.feature .feature-bgimg .content button span {
+    display:none;
 }
 
 /* ===============================
@@ -324,25 +370,6 @@ hr.line {
                     color:lighten(@font-swatch5-color,20%);
                     text-decoration:none;
                 }
-                        &:before {
-                            @media @tablet {
-                                content:"\00d7";
-                                color: @color-swatch3;
-                                padding-right: 1.5em;
-                                position: relative;
-                                font-size: 13px;
-                            }
-                        }
-                        &:after {
-                            content:"\00d7";
-                            color: @color-swatch3;
-                            padding-left: 1.5em;
-                            position: relative;
-                            font-size: 13px;
-                        }
-            }
-            &:last-child a:after {
-                content: "";
             }
         }
     }
@@ -424,6 +451,7 @@ hr.line {
                     width: 100%;
                     padding: 1em 0;
                     border-bottom: 1px dotted @color-swatch1;
+                    background-color:@color-swatch2;
                 }
                 &:last-child {
                     @media @tablet {
@@ -640,6 +668,7 @@ header {
 .widget.companyname {
     display: block;
     float: left;
+    padding:20px 0px;
 }
 
 .widget.companyname a {
@@ -742,28 +771,6 @@ header {
             }
 
         }
-
-.menu-header h2:before, .widget.menu .main .menu-subsection-header h2:before {
-    content: "★";
-    display: inline-block;
-    height: 0.6em;
-    position: relative;
-    vertical-align: middle;
-    margin-bottom: 1.7em;
-    font-size:22px;
-    margin-right:15px;
-}
-
-.widget.menu .main .menu-subsection-header h2:after {
-    content: "★";
-    display: inline-block;
-    height: 0.6em;
-    position: relative;
-    vertical-align: middle;
-    margin-bottom: 1.7em;
-    font-size:22px;
-    margin-left:15px;
-}
 
 /* ===============================
    6. MENU
@@ -883,6 +890,7 @@ header {
                         border-bottom:1px dashed darken(@color-swatch1,10%);
                         padding-bottom: 30px;
                         margin-bottom: 30px;
+                        text-align:center;
                         h3 {    /* menu-item-name */  
                             padding: 0;
                             font-family: @font-swatch3-font-family;
@@ -925,7 +933,6 @@ header {
                             line-height:@font-swatch5-line-height;
                             color:@font-swatch5-color;
                             letter-spacing: @font-swatch5-letter-spacing;
-                            float: left;
                             padding: 0;
                         }
                         h4 {  /* nutritional-title */
@@ -1056,30 +1063,6 @@ header {
     }/* end main */
 
 } /* end .widget.menu */
-
-.widget.menu .main .menu-header h1:before, .widget.menu .main .menu-subsection-header h1:before {
-    content: "";
-    background: image('/images/leaf-left.png');
-    background-repeat: no-repeat;
-    display: inline-block;
-    height: 41px;
-    width: 46px;
-    margin: 0 20px;
-    position: relative;
-    top: 9px;
-}
-
-.widget.menu .main .menu-header h1:after, .widget.menu .main .menu-subsection-header h1:after {
-    content: "";
-    background: image('/images/leaf-right.png');
-    background-repeat: no-repeat;
-    display: inline-block;
-    height: 41px;
-    width: 46px;
-    margin: 0 20px 0px 14px;
-    position: relative;
-    top: 9px;
-}
 
 /* ===============================
    7. FOOTER
@@ -1605,7 +1588,7 @@ button.btn:hover {
 
 .widget.profile form button {
     background-color:@color-swatch3;
-    padding:12px;
+    padding:14px 14px 10px 14px;
 }
 
 .widget.profile form button:hover {
@@ -1730,11 +1713,6 @@ blockquote:before {
 /* ===============================
    9. IPAD WIDTH
    =============================== */
-@media only screen and (max-width: 1150px) {
-    .widget.feature .spare {
-        width:50%;
-    }
-}
 
 @media only screen and (max-width: 768px) {
 
@@ -1801,10 +1779,6 @@ blockquote:before {
         min-height:50px;
     }
 
-    .bk-pt-default-menu header.bk-header .companyheader {
-        padding:130px 0px;
-    }
-
     .navbar {
         display:none;
     }
@@ -1846,10 +1820,6 @@ blockquote:before {
         text-align:center;
         display:block;
     }
-    .widget.feature .feature-bgimg .content button.btn {
-        margin:0px auto;
-        display:table;
-    }
 
     .widget.feature .feature-bgimg .content {
         padding:0;
@@ -1888,6 +1858,16 @@ blockquote:before {
     .widget.extendednavigation .bk-overlay {
         width:100%;
     }
+    .featurebtn {
+        background-size:50px;
+    }
+    .featurebtn-container {
+        margin-top: -120px;
+        padding-bottom: 80px;
+    }
+    .widget.logo {
+        float:none;
+    }
 }
 
 /* ===============================
@@ -1914,10 +1894,6 @@ blockquote:before {
           font-size: bkscale(@font-swatch10-font-size,0.9);
           line-height:bkscale(@font-swatch10-line-height,0.9);
           padding-bottom:0px;  
-    }
-
-    header.bk-header .companyheader {
-        padding: 120px 0px 100px 0px;
     }
 
     .bk-content-text p {
@@ -1961,10 +1937,6 @@ blockquote:before {
       display:none;
     }
 
-    header.bk-header .companyheader{
-        margin:0px
-    }
-
     .widget.contactform form {
         padding-top:10px;
     }
@@ -1983,10 +1955,6 @@ blockquote:before {
 
     .widget.logo img {
         width:60px;
-    }
-
-    .bk-pt-default .widget .extendednavigation ul li:last-child {
-        border-bottom:0;
     }
 
     .widget.feature .feature-bgimg {
@@ -2019,6 +1987,10 @@ blockquote:before {
     }
     .widget.logo img {
         width: 80%;
+    }
+    .featurebtn-container {
+        margin-top: -120px;
+        padding-bottom: 80px;
     }
 
 }

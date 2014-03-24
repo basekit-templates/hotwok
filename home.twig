@@ -2,25 +2,34 @@
 {% extends "layout.twig" %}
 
 {% block content %}
-<section>
-  <div class="content">
-    {{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"Lorem Ipsum","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}}
+
+
+<div class="featureimage">
+      {{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"Lorem Ipsum","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}}
   <header class="bk-header">
-      <div class="wrapper clearfix">
+      <div class="header-container wrapper clearfix">
         <div class="companyheader clearfix">
             {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-            {{widget('companyname', 'companyname', {"business": "ITALIO"})|raw}}
+            {{widget('companyname', 'companyname', {"business": "HOTWOK"})|raw}}
         </div>
           {{widget('extendednavigation', 'navigationheader', {})|raw}}
       </div>
   </header> 
-</section>
 </div>
 
+    <div class="featurebtn-container">
+        <a href="#anchor">
+            <div class="featurebtn">
+            </div>
+        </a>
+    </div>
       <div class="wrapper clearfix">
+          <a name="anchor"></a>
               {{zone('main')|raw}}
-          </div>
+      </div>
+          
       <footer class="bk-footer">
+      
       </footer>
 
 {% endblock %}
