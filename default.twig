@@ -3,20 +3,22 @@
 
 {% block content %}
 
-    {{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"Lorem Ipsum","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}}
-
-      <div class="menu-container">
-            {{widget('extendednavigation', 'navigationheader', {})|raw}}
-      </div>
-
-      <div class="canvas">
-          <div class="wrapper clearfix">
-              {{zone('main')|raw}}
+<div class="bk-pt-default">
+      <header class="bk-header">
+          <div class="header-container wrapper clearfix">
+            <div class="companyheader clearfix">
+                {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+                {{widget('companyname', 'companyname', {"business": "HOTWOK"})|raw}}
+            </div>
+              {{widget('extendednavigation', 'navigationheader', {})|raw}}
           </div>
-      </div>
-      <footer class="bk-footer">
-        {{widget('companyaddress', 'companyaddress', {})|raw}}
-        {{widget('profile', 'footercolumn1profilePhone', { 'profileType':'phone', 'phone':'profile'})|raw}} 
-        </footer>
+      </header> 
+          <div class="wrapper clearfix">
+                  {{zone('main')|raw}}
+          </div>
+              
+          <footer class="bk-footer">
+          </footer>
+</div>
 
 {% endblock %}
