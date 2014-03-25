@@ -690,7 +690,6 @@ header {
 .widget.logo {
     display: block;
     float: left;
-    margin-right: 10px;
 }
 
 .box {
@@ -1220,6 +1219,10 @@ footer.bk-footer {
     background-image: image('/images/social/socialicons-youtube.png')
 }
 
+.widget.socialicons span a:hover, .widget.profile .bk-profile-socialicons span a:hover {
+    background-color:lighten(@color-swatch2,15%);
+}
+
 /* ===============================
   BLOG
    =============================== */
@@ -1494,7 +1497,7 @@ footer.bk-footer {
   
 .widget.contactform form fieldset button.btn:hover {
   cursor: pointer;
-  background-color: darken(@color-swatch3,5%);
+  background-color: lighten(@color-swatch2,15%);
   -webkit-transition: background-color 0.15s ease-in-out;
   -moz-transition: background-color 0.15s ease-in-out;
   -o-transition: background-color 0.15s ease-in-out;
@@ -1537,7 +1540,7 @@ button.btn {
 
 button.btn:hover {
   cursor: pointer;
-  background-color: darken(@color-swatch3,5%);
+  background-color: lighten(@color-swatch2,15%);
   -webkit-transition: background-color 0.15s ease-in-out;
   -moz-transition: background-color 0.15s ease-in-out;
   -o-transition: background-color 0.15s ease-in-out;
@@ -1549,12 +1552,12 @@ button.btn:hover {
    =============================== */
 
 .signupform fieldset button {
-    padding:9px 11px 12px;
+    padding:11px 15px 7px;
 }
 
 .signupform fieldset button:hover {
   cursor: pointer;
-  background-color: darken(@color-swatch3,5%);
+  background-color: lighten(@color-swatch2,15%);
   -webkit-transition: background-color 0.15s ease-in-out;
   -moz-transition: background-color 0.15s ease-in-out;
   -o-transition: background-color 0.15s ease-in-out;
@@ -1592,7 +1595,7 @@ button.btn:hover {
 
 .widget.profile form button:hover {
   cursor: pointer;
-  background-color: darken(@color-swatch3,5%);
+  background-color: lighten(@color-swatch2,15%);
   -webkit-transition: background-color 0.15s ease-in-out;
   -moz-transition: background-color 0.15s ease-in-out;
   -o-transition: background-color 0.15s ease-in-out;
@@ -1624,7 +1627,7 @@ button.btn:hover {
 
 .blogsearch form button:hover {
   cursor: pointer;
-  background-color: darken(@color-swatch3,5%);
+  background-color: lighten(@color-swatch2,15%);
   -webkit-transition: background-color 0.15s ease-in-out;
   -moz-transition: background-color 0.15s ease-in-out;
   -o-transition: background-color 0.15s ease-in-out;
@@ -1648,7 +1651,7 @@ button.btn:hover {
 
 .widget.paypalbuynow .widget.button.paypal:hover {
   cursor: pointer;
-  background-color: darken(@color-swatch3,5%);
+  background-color: lighten(@color-swatch2,15%);
   -webkit-transition: background-color 0.15s ease-in-out;
   -moz-transition: background-color 0.15s ease-in-out;
   -o-transition: background-color 0.15s ease-in-out;
@@ -1665,7 +1668,7 @@ button.btn:hover {
 
 .widget.tweet a:hover {
   cursor: pointer;
-  background-color: darken(@color-swatch3,5%);
+  background-color: lighten(@color-swatch2,15%);
   -webkit-transition: background-color 0.15s ease-in-out;
   -moz-transition: background-color 0.15s ease-in-out;
   -o-transition: background-color 0.15s ease-in-out;
@@ -1683,7 +1686,7 @@ button.btn:hover {
 
 .widget.dropbox button:hover {
   cursor: pointer;
-  background-color: darken(@color-swatch3,5%);
+  background-color: lighten(@color-swatch2,15%);
   -webkit-transition: background-color 0.15s ease-in-out;
   -moz-transition: background-color 0.15s ease-in-out;
   -o-transition: background-color 0.15s ease-in-out;
@@ -1695,6 +1698,15 @@ button.btn:hover {
     background-repeat:no-repeat;
     background-position: 10px;
     background-size: 22px;
+}
+
+.widget.button button:hover {
+      cursor: pointer;
+      background-color: lighten(@color-swatch2,15%);
+      -webkit-transition: background-color 0.15s ease-in-out;
+      -moz-transition: background-color 0.15s ease-in-out;
+      -o-transition: background-color 0.15s ease-in-out;
+      transition: background-color 0.15s ease-in-out;
 }
 
 /* ===============================
@@ -1895,8 +1907,8 @@ blockquote:before {
     }
 
     h1 {
-          font-size: bkscale(@font-swatch1-font-size,0.7);
-          line-height:bkscale(@font-swatch1-line-height,0.7);
+          font-size: bkscale(@font-swatch1-font-size,0.5);
+          line-height:bkscale(@font-swatch1-line-height,0.3);
           letter-spacing:bkscale(@font-swatch1-letter-spacing,0.2);
     }
 
@@ -1978,7 +1990,8 @@ blockquote:before {
         background-color:darken(@color-swatch3,5%);
     }
     .widget.feature .spare {
-        width:70%;
+        width:90%;
+        margin-top:50px;
     }
     .widget.logo img {
         width: 80%;
