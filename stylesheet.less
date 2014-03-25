@@ -974,6 +974,7 @@ header {
                                     color: @color-swatch1;
                                     margin-right: 5px;
                                     padding:5px;
+                                    border-radius:3px;
                                 }                                
                                 .not-spicy-icon {
                                     display:none;
@@ -1790,10 +1791,6 @@ blockquote:before {
     .canvas {
         padding:30px 0px;
     }
-    .widget.feature .spare {
-        width:60%;
-    }
-
     .headerprofile .header-left .widget.profile{
         margin:0px auto;
         display:table;
@@ -1818,9 +1815,6 @@ blockquote:before {
         padding: 0 0 20px 0;
     }
 
-    .widget.feature .feature-bgimg .content .spare {
-        width:70%;
-    }
     .widget.feature h2, .widget.feature h3 {
         text-align:center;
         display:block;
@@ -1873,6 +1867,9 @@ blockquote:before {
     .widget.logo {
         float:none;
     }
+    .widget.feature .feature-bgimg .content h3 {
+          margin-top:10px;
+      }
 }
 
 /* ===============================
@@ -1907,8 +1904,8 @@ blockquote:before {
     }
 
     h1 {
-          font-size: bkscale(@font-swatch1-font-size,0.5);
-          line-height:bkscale(@font-swatch1-line-height,0.3);
+          font-size: bkscale(@font-swatch1-font-size,0.7);
+          line-height:bkscale(@font-swatch1-line-height,0.7);
           letter-spacing:bkscale(@font-swatch1-letter-spacing,0.2);
     }
 
@@ -1918,13 +1915,13 @@ blockquote:before {
           letter-spacing:bkscale(@font-swatch2-letter-spacing,0.5);
     }
     .widget.feature .feature-bgimg .content h2 {
-          font-size: bkscale(@font-swatch8-font-size,0.6);
-          line-height:bkscale(@font-swatch8-line-height,0.8);
+          font-size: bkscale(@font-swatch8-font-size,0.4);
+          line-height:bkscale(@font-swatch8-line-height,0.6);
           letter-spacing:bkscale(@font-swatch2-letter-spacing,0.5);
     }
     .widget.feature .feature-bgimg .content h3 {
           font-size: bkscale(@font-swatch9-font-size,0.6);
-          line-height:bkscale(@font-swatch9-line-height,0.6);
+          line-height:bkscale(@font-swatch9-line-height,0.8);
           letter-spacing:bkscale(@font-swatch2-letter-spacing,0.5);
     }
     .bk-content-text h2 {
