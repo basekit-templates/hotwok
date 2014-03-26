@@ -164,6 +164,10 @@ header.bk-header {
     position:relative;
 }
 
+.bk-pt-default .widget.menusections {
+    margin-top:40px;
+}
+
 /* ===============================
    3. FEATURE
    =============================== */
@@ -444,7 +448,8 @@ header.bk-header {
     .extendednavigation {
         float: none;
         position: relative;
-        max-width: 100%;
+        display: inline-block;
+        float: right;
         min-height: 50px;
         padding:10px 0px;
         @media @tablet {
@@ -1890,7 +1895,22 @@ blockquote:before {
     }
     .widget.feature .feature-bgimg .content h3 {
           margin-top:10px;
-      }
+    }
+    .bk-pt-default .widget .extendednavigation {
+        display:block;
+        float:none;
+    }
+    .widget .extendednavigation {
+        display:block;
+        float:none;
+    }
+    .widget .extendednavigation ul {
+        position:relative;
+        z-index:99999;
+    }
+    .bk-pt-default .widget.menusections {
+        margin-top: 0;
+    }
 }
 
 /* ===============================
