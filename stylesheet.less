@@ -128,7 +128,7 @@ hr.line {
     display:table;
 }
 
-.bk-header {
+header.bk-header {
   padding: 0;
   width: 100%;
   position: absolute;
@@ -157,7 +157,11 @@ hr.line {
 }
 
 .bk-pt-default .widget.content {
-    margin-top:150px;
+    margin-top:20px;
+}
+
+.bk-pt-default .bk-header {
+    position:relative;
 }
 
 /* ===============================
@@ -670,11 +674,6 @@ hr.line {
    HEADER
    =============================== */
 
-header {
-    padding: 20px 0;
-    background-color: @color-swatch2;
-}
-
 .companyheader {
     display: block;
     float: left;
@@ -995,6 +994,7 @@ header {
                                     margin-right: 5px;
                                     padding:5px;
                                     border-radius:3px;
+                                    font-weight:400;
                                 }                                
                                 .not-spicy-icon {
                                     display:none;
@@ -1555,7 +1555,7 @@ footer.bk-footer {
 
 button.btn {
     background-color:@color-swatch3;
-    padding:10px;
+    padding:15px;
     color: @font-swatch7-color;
 }
 
@@ -1792,6 +1792,7 @@ blockquote:before {
     .widget.menusections ul li {
         border-bottom:0;
         padding:0;
+        padding:5px 0px;
     }
 
     .widget.menusections {
@@ -2013,6 +2014,12 @@ blockquote:before {
     .featurebtn-container {
         margin-top: -120px;
         padding-bottom: 80px;
+    }
+    .signupform fieldset input {
+        width:50%;
+    }
+    .widget.profile form fieldset input {
+        width:50%;
     }
 
 }
