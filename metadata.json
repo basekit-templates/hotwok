@@ -63,7 +63,7 @@
             "font-weight": "700",
             "line-height": "50px",
             "color": "@color-swatch4",
-            "letter-spacing": "10px"
+            "letter-spacing": "5px"
         },
         "font2": {
             "font-family": "\"Josefin Sans\", Geneva, Tahoma, sans-serif",
@@ -71,7 +71,7 @@
             "font-weight": "700",
             "line-height": "38px",
             "color": "@color-swatch4",
-            "letter-spacing": "10px"
+            "letter-spacing": "5px"
         },
         "font3": {
             "font-family": "\"Josefin Sans\", Geneva, Tahoma, sans-serif",
@@ -140,7 +140,7 @@
             "font-weight": "700",
             "line-height": "28px",
             "color": "@color-swatch1",
-            "letter-spacing": "15px"
+            "letter-spacing": "10px"
         }
     }
 }
