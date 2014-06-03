@@ -140,6 +140,9 @@ header.bk-header {
     &.wrapper {
         margin: 0 auto;
     }
+    @media only screen and (max-height: 600px) {
+        padding: 0;
+    }
 }
 
 .twitter ul li a {
@@ -254,12 +257,23 @@ header.bk-header {
             -o-background-size: cover;
             background-size: cover;
             min-height: 500px; /* height should be in the media query */
+            @media @tablet {
+                min-height: 0px;
+            }
             .content {
                 display: table-cell;
                 vertical-align: middle;
                 -webkit-box-sizing: border-box;
                 -moz-box-sizing: border-box;
                 box-sizing: border-box;
+                @media @tablet {
+                    height: auto;
+                }
+                @media only screen and (max-height: 600px) {
+                    position: relative;
+                    vertical-align: bottom;
+                    top: -60px;
+                }
                 .spare {
                     display: block;
                     margin: 0 auto;
@@ -275,6 +289,9 @@ header.bk-header {
     margin-top: -150px;
     padding-bottom: 85px;
     text-align:center;
+    @media only screen and (max-height: 600px) {
+        display: none;
+    }
 }
 
 .featurebtn {
@@ -459,6 +476,9 @@ header.bk-header {
                 width: 100%;
                 margin-top:50px;
                 background-color:@color-swatch2;
+            }
+            @media only screen and (max-height: 600px) {
+                margin-top: 30px;
             }
             li {
                 padding: 5px 0;
@@ -685,6 +705,9 @@ header.bk-header {
     padding: 20px 0px;
     @media only screen and (max-width: 768px) {
         text-align: center;
+    }
+    @media only screen and (max-height: 600px) {
+        padding: 5px 0
     }
 }
 
