@@ -12,7 +12,7 @@
             {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
             {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
         </div>
-          {{widget('extendednavigation', 'navigationheader', {})|raw}}
+          {{widget('extendednavigation', 'navigationheader', {"align":"right"})|raw}}
       </div>
   </header> 
 </div>
@@ -29,7 +29,7 @@
       </div>
           
       <footer class="bk-footer">
-      
+         <h4>{{widget('content', 'footer', {content: 'Copyright. 2014', lines: 'all'})|raw}}</h4>
       </footer>
 
 {% endblock %}
