@@ -140,7 +140,7 @@ header.bk-header {
     &.wrapper {
         margin: 0 auto;
     }
-    @media only screen and (max-height: 600px) {
+    @media only screen and (max-height: 400px) {
         padding: 0;
     }
 }
@@ -269,10 +269,8 @@ header.bk-header {
                 @media @tablet {
                     height: auto;
                 }
-                @media only screen and (max-height: 600px) {
-                    position: relative;
-                    vertical-align: bottom;
-                    top: -60px;
+                @media only screen and (max-height: 400px) {
+                    padding-top: 35px!important;
                 }
                 .spare {
                     display: block;
@@ -289,7 +287,7 @@ header.bk-header {
     margin-top: -150px;
     padding-bottom: 85px;
     text-align:center;
-    @media only screen and (max-height: 600px) {
+    @media only screen and (max-height: 400px) {
         display: none;
     }
 }
@@ -454,6 +452,7 @@ header.bk-header {
     &.extendednavigation {
         display: inline-block;
         width: 68%;
+        vertical-align: top;
         @media @tablet {
             width: 100%;
         }
@@ -462,11 +461,14 @@ header.bk-header {
         position: relative;
         display: inline-block;
         min-height: 50px;
-        padding: 20px 0px;
+        padding: 25px 0px;
         width: 100%;
         @media @tablet {
             background-color: @font-swatch6-background-color;
         }
+         @media @tablet {
+            padding: 5px 0;
+         }
         ul {
             padding: 0;
             @media @tablet {
@@ -474,11 +476,8 @@ header.bk-header {
                 display: none;
                 /* Then these styles are applied */
                 width: 100%;
-                margin-top:50px;
+                margin-top: 10px;
                 background-color:@color-swatch2;
-            }
-            @media only screen and (max-height: 600px) {
-                margin-top: 30px;
             }
             li {
                 padding: 5px 0;
@@ -623,6 +622,11 @@ header.bk-header {
                         border: none;
                    }
                }
+               @media @tablet {
+                    margin: 0 0;
+                    top: -60px;
+                    width: 40px;
+                }
            }
        }
     }
@@ -695,7 +699,7 @@ header.bk-header {
     margin: 6px 0 0;
     width: 30%;
     @media @tablet {
-        width: 100%
+        width: 85%;
     }
 }
 
@@ -706,7 +710,7 @@ header.bk-header {
     @media only screen and (max-width: 768px) {
         text-align: center;
     }
-    @media only screen and (max-height: 600px) {
+    @media only screen and (max-height: 400px) {
         padding: 5px 0
     }
 }
@@ -738,7 +742,9 @@ header.bk-header {
     &.logo, &.companyname {
         display: table;
         @media @tablet {
+            display: inline-block;
             margin: 0px auto;
+            vertical-align: middle;
         }
     }
 }
@@ -1770,10 +1776,6 @@ blockquote:before {
         top:-2px;
     }
 
-    .widget .extendednavigation a.pull {
-        width:100%;
-    }
-
     .widget.menusections ul li {
         border-bottom:0;
         padding:0;
@@ -1832,9 +1834,12 @@ blockquote:before {
 
     .companyheader {
         padding: 0;
-        margin: 0px auto;
         display: table;
-        float:none;
+        float: none;
+        @media only screen and (max-height: 400px) {
+            display: inline-block;
+            margin: 0 0;
+        }
     }
 
     .widget .extendednavigation a.pull:after {
