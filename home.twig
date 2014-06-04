@@ -5,7 +5,7 @@
 
 
 <div class="featureimage">
-      {{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"Lorem Ipsum","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}}
+      {{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"Lorem Ipsum","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true, 'align':'justifycenter'})|raw}}
   <header class="bk-header">
       <div class="header-container wrapper clearfix">
         <div class="companyheader clearfix">
@@ -17,21 +17,17 @@
   </header> 
 </div>
 
-    <div class="featurebtn-container">
-        <a href="#anchor">
-            <div class="featurebtn">
-            </div>
-        </a>
+{{widget('button', 'anchor', {text:'button', 'align':'widget-align-center'})|raw}}
+
+<div class="wrapper clearfix">
+    <a name="anchor"></a>
+    {{zone('main')|raw}}
+</div>
+    
+<footer class="bk-footer">
+   <div class="wrapper clearfix">
+      {{widget('content', 'footer', {content: 'Copyright. 2014', lines: 'all'})|raw}}
     </div>
-      <div class="wrapper clearfix">
-          <a name="anchor"></a>
-              {{zone('main')|raw}}
-      </div>
-          
-      <footer class="bk-footer">
-         <div class="wrapper clearfix">
-            {{widget('content', 'footer', {content: 'Copyright. 2014', lines: 'all'})|raw}}
-          </div>
-      </footer>
+</footer>
 
 {% endblock %}
