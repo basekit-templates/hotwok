@@ -29,8 +29,9 @@
       </div>
           
       <footer class="bk-footer">
-         <h4>{{widget('content', 'footer', {content: 'Copyright. 2014', lines: 'all'})|raw}}</h4>
+         <div class="wrapper clearfix">
+            {{widget('content', 'footer', {content: 'Copyright. 2014', lines: 'all'})|raw}}
+          </div>
       </footer>
 
 {% endblock %}
-
