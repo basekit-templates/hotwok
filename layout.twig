@@ -40,18 +40,18 @@
 
 	<script type="text/javascript">
 
-	$(".featureimage").css("height", $(window).height());
+	$(".widget.feature").css("height", $(window).height());
 	$(window).bind("resize",function() {
-	    $(".featureimage").css("height", $(window).height());
+	    $(".widget.feature").css("height", $(window).height());
 	});
 
 	</script>
 
 	<script type="text/javascript">
- 	$("#anchor").click(function() {
+ 	$(".scroll-button button").click(function() {
 	    $('html, body').animate({
 	        scrollTop: $("#anchor").offset().top
-	    }, 2000);
+	    }, 1500);
 	});
 	</script>
 
