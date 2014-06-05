@@ -479,10 +479,8 @@ hr.line {
         @media @tablet {
             background-color: @font-swatch6-background-color;
             min-height: 0;
+            padding: 0
         }
-         @media @tablet {
-            padding: 5px 0;
-         }
         ul {
             padding: 0;
             @media @tablet {
@@ -565,15 +563,11 @@ hr.line {
                             content: "\25BC";
                             font-size: 8px;
                             position: absolute;
-                            top: 1px;
+                            top: 2px;
                             display: block;
                             z-index: 9999999;
                             right: 0;
                             color: @color-swatch1;
-                            @media @tablet {
-                                font-size: 10px;
-                                padding-right: 10px;
-                            }
                         }
                         @media @tablet {
                                 color: @color-swatch5;
@@ -1101,7 +1095,7 @@ hr.line {
    7. FOOTER
   =============================== */
 
-footer.bk-footer {
+.bk-footer {
     min-height: 100px;
     background-color: @color-swatch2;
     padding:1em 0;
@@ -1117,7 +1111,7 @@ footer.bk-footer {
             color: @font-swatch9-color;
         p {
             font-family:@font-swatch9-font-family;
-            font-size:@font-swatch5-font-size;
+            font-size: bkscale(@font-swatch5-font-size, 1.2);
             font-weight: @font-swatch9-font-weight;
             line-height:@font-swatch9-line-height;
             color: @font-swatch9-color;
@@ -1196,6 +1190,9 @@ footer.bk-footer {
 /* BLOG SEARCH */
 .blogsearch {
     form {
+        label {
+            display: block;
+        }
         button {
             padding: 10px 20px 6px 20px;
             color: @font-swatch7-color;
@@ -1481,6 +1478,8 @@ button.btn:hover {
 
 .signupform fieldset button {
     padding: 10px 15px 11px;
+    top: -1px;
+    position: relative;
 }
 
 .signupform fieldset button:hover {
@@ -1493,15 +1492,9 @@ button.btn:hover {
 }
 
 .signupform fieldset input {
-    width:70%;
-    border:0;
+    width: 70%;
+    border: 0;
     background-color:darken(@color-swatch1,5%);
-    @media @tablet {
-        width: 90%;
-    }
-    @media @mobile {
-        width: 100%;
-    }
 }
 
 .widget.feature button {
@@ -1938,9 +1931,6 @@ blockquote:before {
     .featurebtn-container {
         margin-top: -120px;
         padding-bottom: 80px;
-    }
-    .signupform fieldset input {
-        width:50%;
     }
     .widget.profile form fieldset input {
         width:50%;
