@@ -127,12 +127,16 @@ hr.line {
     height:1px;
 }
 
-header.bk-header {
+.bk-header {
   padding: 0;
   width: 100%;
   position: absolute;
   top:0;
   background-color:transparent;
+}
+
+.widget.feature.bk-tpl-hidden + .bk-header {
+    position: relative;
 }
 
 .header-container {
