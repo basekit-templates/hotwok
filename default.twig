@@ -1,27 +1,31 @@
-
 {% extends "layout.twig" %}
 
 {% block content %}
 
 <div class="bk-pt-default">
-      <header class="bk-header">
-          <div class="header-container wrapper clearfix">
-            <div class="companyheader clearfix">
-                {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-                {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
-            </div>
-              {{widget('extendednavigation', 'navigationheader', {"align":"right"})|raw}}
-          </div>
-      </header> 
-          <div class="wrapper clearfix">
-                  {{zone('main')|raw}}
-          </div>
-              
-          <footer class="bk-footer">
-              <div class="wrapper clearfix">
-                {{widget('content', 'footer', {content: 'Copyright. 2014', lines: 'all'})|raw}}
-              </div>
-          </footer>
-</div>
+
+  <header class="bk-header">
+    <div class="header-container wrapper clearfix">
+      <div class="companyheader clearfix">
+          {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+          {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+      </div><!--end companyheader-->
+      {{widget('extendednavigation', 'navigationheader', {"align":"right"})|raw}}
+    </div><!--end header-container-->
+  </header>
+
+  <div role="main">
+    <div class="wrapper clearfix">
+      {{zone('main')|raw}}
+    </div><!--end wrapper clearfix-->
+  </div><!--end main-->
+
+  <footer class="bk-footer">
+      <div class="wrapper clearfix">
+        {{widget('content', 'footer', {content: 'Copyright. 2014', lines: 'all'})|raw}}
+      </div><!--end wrapper clearfix-->
+  </footer>
+
+</div><!--end bk-pt-default-->
 
 {% endblock %}
