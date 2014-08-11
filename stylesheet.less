@@ -1344,6 +1344,13 @@ hr.line {
     background-color:@color-swatch3;
     text-decoration: none;
     font-weight:700!important;
+    font-family: @font-swatch7-font-family;
+    font-size: @font-swatch7-font-size;
+    font-weight: @font-swatch7-font-weight;
+    line-height: @font-swatch7-line-height;
+    color: @font-swatch7-color;
+    letter-spacing: @font-swatch7-letter-spacing;
+    padding:13px 15px;
     &:hover {
         background-color:lighten(@color-swatch3,15%);
     }
@@ -1363,12 +1370,20 @@ hr.line {
    =============================== */
 
 .widget.profile .bk-profile-socialicons span a {
-    background-color: @font-swatch5-color;
+    background-color: @color-swatch3;
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
     border-radius: 100px;
     &:hover {
-        background-color: darken(@font-swatch5-color, 20%);
+        background-color: lighten(@color-swatch3,15%);
+    }
+}
+
+.widget.socialicons span a {
+    background-color: @color-swatch3;
+    border-radius:50px;
+    &:hover {
+        background-color: lighten(@color-swatch3,15%);
     }
 }
 
@@ -1545,8 +1560,8 @@ hr.line {
     z-index: 12;
     width: 11%;
     height: 42px;
-    top: 43%;
-    left: 48%;
+    top: 42%;
+    left: 45%;
     max-width: 60px;
 }
 
@@ -1932,7 +1947,12 @@ blockquote:before {
     }
 
     .widget.menusections {
-        min-height:0;
+        min-height:90px;
+        padding:20px 0px;
+    }
+    .widget.menusections ul li:first-child {
+        padding:0;
+        margin:0;
     }
     .feature-overlay {
         margin-top:-2px;
