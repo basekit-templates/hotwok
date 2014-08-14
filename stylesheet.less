@@ -127,22 +127,32 @@ hr.line {
     height:1px;
 }
 
-.bk-header {
-  padding: 0;
-  width: 100%;
-  position: absolute;
-  top:0;
-  background-color:transparent;
+.bk-pt-home {
+    .widget.feature + .bk-header {
+        background: transparent;
+        padding: 30px 0 30px 30px;
+        position: absolute;
+        top: 0;
+        width: 90%;
+        z-index: 9999;
+        @media @mobile {
+            left: 0;
+            width: 80%;
+        }
+    }
 }
 
-.widget.feature.bk-tpl-hidden + .bk-header {
-    background: @color-swatch3;
-    position: relative;
+.bk-header {
+    background: lighten(@color-swatch6, 5%);
+    padding: 30px;
+    width: 100%;
+    @media @mobile {
+        padding: 25px 30px 15px;
+    }
 }
 
 .header-container {
     padding: 20px 0px;
-    background-color:@color-swatch3;
     &.wrapper {
         margin: 0 auto;
     }
