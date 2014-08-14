@@ -2,6 +2,7 @@
 
 {% block content %}
 
+  <div class="bk-pt-home">
 <div class="featureimage">
   {{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"Lorem Ipsum","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true, 'align':'justifycenter'})|raw}}
   <header class="bk-header">
@@ -30,5 +31,6 @@
       {{widget('content', 'footer', {content: 'Copyright. 2014', lines: 'all'})|raw}}
     </div><!--end wrapper clearfix-->
 </footer>
+</div>
 
 {% endblock %}
