@@ -3,7 +3,6 @@
 {% block content %}
 
   <div class="bk-pt-home">
-  <div role="main" id="main">
   {{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"Lorem Ipsum","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true, 'align':'justifycenter'})|raw}}
   <header class="bk-header">
     <div class="header-container wrapper clearfix">
@@ -19,6 +18,7 @@
   {{widget('button', 'anchor', {text:'button', 'align':'widget-align-center'})|raw}}
 </div>
 
+<div role="main" id="main">
   <div class="wrapper clearfix">
     {{zone('main')|raw}}
   </div><!--end wrapper clearfix-->
