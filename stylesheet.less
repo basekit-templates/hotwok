@@ -143,10 +143,19 @@ hr.line {
             width: 80%;
         }
     }
+    .widget.feature.bk-tpl-hidden + header.bk-header {
+        background: lighten(@color-swatch6, 5%);
+        padding: 30px;
+        position: relative;
+        width: 100%;
+        @media @mobile {
+            padding: 25px 30px 15px;
+        }
+    }
     .widget.feature + header.bk-header + .scroll-button {
         display: block;
     }
-    header.bk-header + .scroll-button {
+    header.bk-header + .scroll-button, .widget.feature.bk-tpl-hidden + header.bk-header + .scroll-button {
         display: none;
     }
 }
