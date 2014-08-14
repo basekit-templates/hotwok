@@ -3,7 +3,6 @@
 {% block content %}
 
   <div class="bk-pt-home">
-  <div role="main" id="main1">
   {{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"Lorem Ipsum","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true, 'align':'justifycenter'})|raw}}
   <header class="bk-header">
     <div class="header-container wrapper clearfix">
@@ -19,19 +18,17 @@
   {{widget('button', 'anchor', {text:'button', 'align':'widget-align-center'})|raw}}
 </div>
 
-<div class="contain" id="contain">
+<div role="main" id="main">
   <div class="wrapper clearfix">
     {{zone('main')|raw}}
   </div><!--end wrapper clearfix-->
 </div><!--end main-->
-
 
 <footer class="bk-footer">
     <div class="wrapper clearfix">
       {{widget('content', 'footer', {content: 'Copyright. 2014', lines: 'all'})|raw}}
     </div><!--end wrapper clearfix-->
 </footer>
-    </div><!--end main-->
-  </div><!--end bk-pt-home-->
+</div>
 
 {% endblock %}
