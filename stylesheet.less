@@ -23,11 +23,6 @@ Table of Contents -
 /* ===============================
    1. Default
    =============================== */
-
-.featureimage {
-  width: 100%;
-  height:100%;
-}
    
 .contain {
     position: relative;
@@ -38,6 +33,14 @@ body {
     margin: 0;
     padding: 0;
     background-color:@color-swatch1;
+}
+
+body, html {
+    height: 100%;
+}
+
+.bk-pt-home {
+    height: 100%;
 }
 
 .wrapper {
@@ -140,6 +143,12 @@ hr.line {
             width: 80%;
         }
     }
+    .widget.feature + header.bk-header + .scroll-button {
+        display: block;
+    }
+    header.bk-header + .scroll-button {
+        display: none;
+    }
 }
 
 header.bk-header {
@@ -206,11 +215,13 @@ header.bk-header {
 
 .widget {
     &.feature {
+        height: 100%;
         .feature-bgimg {
             height: 100%;
         }
         .feature-bgimg .content {
             padding: 12em 2em;
+            height: 100%;
             @media @tablet {
                 padding: 8em 1em;
             }
@@ -262,7 +273,6 @@ header.bk-header {
         position: relative;
         width: 100%;
         overflow: hidden;
-        height: 100%;
         .feature-bgimg {
             display: table-row;
             width: 100%;
