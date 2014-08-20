@@ -1379,6 +1379,55 @@ header.bk-header {
     padding-right: 4px;
 }
 
+.blog-post-more-link {
+    padding-top: 10px;
+}
+
+/* ===============================
+   BLOG TIME
+   =============================== */
+
+time.blog-post-published-date, footer.blog-post-metadata time {
+    padding: 1em 0;
+    display: inline-block;
+    color: @font-swatch5-color;
+    &:hover {
+        color: @color-swatch4;
+    }
+}
+
+footer.blog-post-metadata time {
+    margin: 1em 0;
+}
+
+/* ===============================
+   BLOG POST SHARING
+   =============================== */
+
+.blog-post-sharing {
+    margin: 2em 0;
+    button {
+        &.btn.facebook {
+            background-color: #3b5998;
+            &:hover {
+              background-color: lighten(#3b5998,10%);
+            }
+        }
+        &.btn.twitter {
+            background-color: #4099FF;
+            &:hover {
+              background-color: lighten(#4099FF,10%);
+            }
+        }
+        &.btn.googleplus {
+            background-color: #d34836;
+            &:hover {
+              background-color: lighten(#d34836,10%);
+            }
+        }
+    }
+}
+
 /* ===============================
    GALLERY WIDGET
    =============================== */
