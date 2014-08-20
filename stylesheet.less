@@ -444,8 +444,7 @@ header.bk-header {
                 line-height:@font-swatch5-line-height;
                 letter-spacing: @font-swatch5-letter-spacing;
                 &:hover {
-                    color:lighten(@font-swatch5-color,20%);
-                    text-decoration:none;
+                    text-decoration:underline;
                 }
             }
         }
@@ -714,21 +713,15 @@ header.bk-header {
 
 .widget.menu {
     margin:0 auto;
-    @media only screen and (max-width: 1084px) {
-         width: 90%;
-    }
+    width: 100%;
     @media @tablet {
         background-image: none;
         width:100%;
     }
-
     .main {
         width: 100%;
         padding-top:30px;
         margin: 0 auto;
-            @media only screen and (max-width: 1084px) {
-                width: 93%;
-            }
             @media @tablet {
                 background-color: @color-swatch1;
                 width:90%;
