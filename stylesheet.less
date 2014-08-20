@@ -1346,24 +1346,6 @@ header.bk-header {
     width: 100%;
 }
 
-/* BLOG SEARCH */
-.blogsearch {
-    form {
-        label {
-            display: block;
-        }
-        button {
-            padding: 10px 20px 6px 20px;
-            color: @font-swatch7-color;
-            font-size: @font-swatch6-font-size;
-            font-weight: @font-swatch6-font-weight;
-            line-height: @font-swatch6-line-height;
-            background-color: @font-swatch7-background-color;
-            border: none;
-        }
-    }
-}
-
 .blog-post-feature-image-wrap {  /* Blog post feature image */
    background-size: cover;
    background-repeat: no-repeat;
@@ -1758,6 +1740,10 @@ button.btn:hover {
    BLOG SEARCH
    =============================== */
 
+.blogsearch form label {
+    display: block;
+}
+
 .blogsearch form button {
     font-family: @font-swatch7-font-family;
     font-size: @font-swatch7-font-size;
@@ -1765,6 +1751,11 @@ button.btn:hover {
     color: @font-swatch7-color;
     background-color:@color-swatch3;
     padding: 11px 14px;
+    border: none;
+    height: 45px;
+    position: relative;
+    top: -2px;
+    margin-bottom: 10px;
 }
 
 .blogsearch form button:hover {
@@ -1781,6 +1772,10 @@ button.btn:hover {
     border:0;
     background-color:darken(@color-swatch1,5%);
     height: 45px;
+    @media @mobile {
+        width: 100%;
+        margin-bottom: 10px;
+    }
 }
 
 /* ===============================
