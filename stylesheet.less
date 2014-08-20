@@ -1380,6 +1380,14 @@ header.bk-header {
 }
 
 /* ===============================
+   GALLERY WIDGET
+   =============================== */
+
+.gallery .image-data {
+    background: darken(@color-swatch1,3%);
+}
+
+/* ===============================
    SLIDESHOW WIDGET
    =============================== */
 
@@ -2021,10 +2029,16 @@ blockquote:before {
         line-height:@font-swatch7-line-height;
         letter-spacing: @font-swatch7-letter-spacing;
         font-size: @font-swatch7-font-size; 
+        padding:15px 15px 15px 40px !important;
     }
 
     .clicktocall a:hover {
-        background-color:darken(@color-swatch3,5%);
+      cursor: pointer;
+      background-color: lighten(@color-swatch2,15%);
+      -webkit-transition: background-color 0.15s ease-in-out;
+      -moz-transition: background-color 0.15s ease-in-out;
+      -o-transition: background-color 0.15s ease-in-out;
+      transition: background-color 0.15s ease-in-out;
     }
     .widget.feature .spare {
         width:80%;
